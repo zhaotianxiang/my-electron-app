@@ -1,4 +1,4 @@
-const {app, BrowserWindow, ipcMain, dialog} = require('electron');
+const {app, BrowserWindow, ipcMain} = require('electron');
 const path = require('path');
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
@@ -59,31 +59,7 @@ const createWindow = () => {
     // delay 2000
     setTimeout(()=>{
         mainWindow.webContents.send('main-send-event','主动发送消息');
-    },2000);
-
-    // delay 2000
-    setTimeout(()=>{
-        dialog.showOpenDialog({
-            properties:['openFile','multiSelections']
-        }).then(data=>{
-            console.log(data);
-        });
-    },5000);
-
-    mainWindow.on('close', e=>{
-        e.preventDefault();
-        dialog.showMessageBox(mainWindow,{
-            type:'warning',
-            title:'close',
-            message:'is close window',
-            buttons:['cancel','close']
-        }).then(selection=>{
-            console.log(selection);
-            if(selection.response === 1){
-                app.exit();
-            }
-        });
-    });
+    },2000)
 };
 
 // This method will be called when Electron has finished

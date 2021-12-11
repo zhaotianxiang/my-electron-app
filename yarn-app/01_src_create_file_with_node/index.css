@@ -4,14 +4,3 @@ body {
   max-width: 38rem;
   padding: 2rem;
 }
-
-#holder{
-  width: 300px;
-  height: 40px;
-  background: antiquewhite;
-}
-
-#holder h1{
-  font-size: 20px;
-  color: darkmagenta;
-}
