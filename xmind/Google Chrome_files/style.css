@@ -1,0 +1,22 @@
+html, body, h1, h2, h3, h4, h5, h6, p, ul, ol, dd, dt, dl { margin:0; padding:0; border:0 }
+p, ul, ol { padding:0 0 1em 0; }
+ul, ol { padding-left:3em; }
+h1, h2, h3, h4, h5 { padding:0 0 1em 0; }
+body { font-size:13px; font-family:Arial, sans-serif; color:#000; background:#fff; padding:0.5em; }
+a img { border:none; }
+img { vertical-align:bottom; }
+.leftpage,.rightpage { float:left; margin:0 0 10px; }
+.rightpage { margin-left:13px; }
+.leftpage img, .rightpage img { border:1px solid #999; }
+#page { margin:0 auto; }
+#info { height:1.8em; }
+#info p { padding:0; }
+.small { width:970px; }
+.med { width:1105px; }
+.big { width:1431px; }
+a img { border:none; }
+.right { float:right; width:32%; text-align:right; }
+.center { float:left; width:32%; text-align:center; }
+.left { float:left; width:32%; clear:left; }
+#pageselect { margin:0 5px; }
+#footer { clear:both; padding-top:13px; color:#666; text-align:center; }
