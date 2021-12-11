@@ -45,17 +45,13 @@ const createWindow = () => {
             webviewTag: true
         }
     });
-
     // and load the index.html of the app.
     mainWindow.loadFile(path.join(__dirname, 'index.html'));
-
     // Open the DevTools.
     mainWindow.webContents.openDevTools();
-
     // 主动发送信息给渲染进程
     // 此时，子进程的通信模块还没有建立起来，所以发送失败了，怎么办？
     mainWindow.webContents.send('main-send-event','主动发送消息');
-
     // delay 2000
     setTimeout(()=>{
         mainWindow.webContents.send('main-send-event','主动发送消息');
